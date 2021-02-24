@@ -1,0 +1,36 @@
+[
+    {
+        "service":"users",
+        "columns":[
+            {
+                "field":"id",
+                "title":"User id"
+            },
+            {
+                "field":"name",
+                "title":"User name"
+            }
+        ]
+    },
+    {
+        "service":"campaigns",
+        "columns":[
+            {
+                "field":"name",
+                "title":"Name"
+            },
+            {
+                "field":"active",
+                "title":"Active?"
+            },
+            {
+                "field":"marketplace",
+                "title":"Marketplace?"
+            },
+            {
+                "field":"revenue",
+                "title":"Revenue"
+            }
+        ]
+    }
+]

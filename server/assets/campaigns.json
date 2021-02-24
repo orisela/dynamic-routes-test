@@ -1,0 +1,14 @@
+[
+  {
+      "name":"Campign1",
+      "active":false,
+      "marketplace":false,
+      "revenue":100
+  },
+  {
+      "name":"Campign2",
+      "active":true,
+      "marketplace":false,
+      "revenue":100
+  }
+]

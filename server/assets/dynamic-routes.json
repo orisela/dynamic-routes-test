@@ -1,0 +1,17 @@
+[
+  {
+      "path":"",
+      "component":"homeComponent",
+      "title":"Home"
+  },
+  {
+      "path":"users",
+      "component":"tableComponent",
+      "title":"Users"
+  },
+  {
+      "path":"campaigns",
+      "component":"tableComponent",
+      "title":"Campaigns"
+  }
+]
