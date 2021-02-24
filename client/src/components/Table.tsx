@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useTableConfigs } from '../hooks/useTableConfigs';
-import useData from '../hooks/useData';
+import useRouteData from '../hooks/useRouteData';
 
 type TableProps = {
   path: string;
@@ -8,7 +8,7 @@ type TableProps = {
 
 const Table: FC<TableProps> = ({ path }) => {
   const tableConfig = useTableConfigs(path);
-  const { data } = useData(path);
+  const routeData = useRouteData(path);
 
   return (
     <div>
@@ -21,7 +21,7 @@ const Table: FC<TableProps> = ({ path }) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((row, index) => (
+          {routeData.map((row, index) => (
             <tr key={index}>
               {tableConfig.columns?.map(({ field }) => (
                 <td key={field}>{row[field] === true ? 'V' : row[field]}</td>

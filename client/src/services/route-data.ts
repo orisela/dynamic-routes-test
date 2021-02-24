@@ -1,6 +1,6 @@
 import { apiUrl } from './utils';
 
-const getData = async (serviceName: string) => {
+const getRouteData = async (serviceName: string) => {
   const url = apiUrl(serviceName);
 
   try {
@@ -12,4 +12,4 @@ const getData = async (serviceName: string) => {
   }
 };
 
-export { getData };
+export { getRouteData };

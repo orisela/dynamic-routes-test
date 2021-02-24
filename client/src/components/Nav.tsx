@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import { useDynamicRoutes } from '../hooks/useDynamicRoutes';
 
 const Nav: FC = () => {
-  const { routes } = useDynamicRoutes();
+  const dynamicRoutes = useDynamicRoutes();
 
   return (
     <nav>
       <ul>
-        {routes.map((route: any) => (
+        {dynamicRoutes.map((route: any) => (
           <li key={route.path}>
             <Link to={route.path}>{route.title}</Link>
           </li>

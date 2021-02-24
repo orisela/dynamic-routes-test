@@ -1,4 +1,3 @@
-/* eslint-disable react/display-name */
 import React, { FC } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { useDynamicRoutes } from '../hooks/useDynamicRoutes';
@@ -6,18 +5,18 @@ import { useDynamicRoutes } from '../hooks/useDynamicRoutes';
 import Home from './Home';
 import Table from './Table';
 
-const _dynamicRouteMap = {
+const dynamicRouteMap = {
   homeComponent: Home,
   tableComponent: Table,
 };
 
 const DynamicRoutes: FC = () => {
-  const { routes } = useDynamicRoutes();
+  const dynamicRoutes = useDynamicRoutes();
 
   return (
     <Switch>
-      {routes.map(({ path, component }) => {
-        const DynamicRoute = _dynamicRouteMap[component];
+      {dynamicRoutes.map(({ path, component }) => {
+        const DynamicRoute = dynamicRouteMap[component];
         return (
           <Route key={path} path={'/' + path} exact={true}>
             <DynamicRoute path={path} />

@@ -11,13 +11,13 @@ type Route = {
 };
 
 const useDynamicRoutes = () => {
-  const [routes, setRoutes] = useState([] as Route[]);
+  const [dynamicRoutes, setDynamicRoutes] = useState([] as Route[]);
 
   useEffect(() => {
-    getDynamicRouteList().then((data) => setRoutes(data));
+    getDynamicRouteList().then((data) => setDynamicRoutes(data));
   }, []);
 
-  return { routes };
+  return dynamicRoutes;
 };
 
 export { useDynamicRoutes };
